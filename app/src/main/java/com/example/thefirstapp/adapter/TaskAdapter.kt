@@ -14,7 +14,8 @@ import com.example.thefirstapp.model.Task
 import com.example.thefirstapp.R
 
 class TaskAdapter(
-    private val onDeleteClick: (Task) -> Unit
+    private val onDeleteClick: (Task) -> Unit,
+    private val onEditClick: (Task) -> Unit
 ) : ListAdapter<Task, TaskAdapter.TaskViewHolder>(TaskDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
@@ -35,6 +36,9 @@ class TaskAdapter(
             titleTextView.text = task.title
             deleteButton.setOnClickListener {
                 onDeleteClick(task)
+            }
+            itemView.setOnClickListener {
+                onEditClick(task)
             }
         }
     }

@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">The First App</string>
     <string name="add_task">Add New Task</string>
+    <string name="edit_task">Edit Task</string>
+    <string name="save_edit">Save</string>
+    <string name="cancel_edit">Cancel</string>
 </resources>
